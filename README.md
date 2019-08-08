@@ -1,16 +1,16 @@
-# Portfolio
+# Pizza Inn
  By **Carine I. SEMWAGA**
 ## Description
- I'm a web designer and developer based in kigali, Rwanda.
+ This is a where you can order your pizza and get it to your doorstep.
 ## Setup Instructions
  You will need to clone the project and then run it.
 ```
-git clone https://github.com/Krasivaya/portfolio.git
+git clone https://github.com/Krasivaya/pizza-inn.git
 ```
 ## Live Site
-[Portfolio](https://krasivaya.github.io/portfolio/)
+[Pizza Inn](https://krasivaya.github.io/Pizza-Inn/)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
- Copyright (c) 2019 **Moringa School**# Akan
+ Copyright (c) 2019 **Moringa School**# Pizza Inn
