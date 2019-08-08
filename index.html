@@ -5,9 +5,10 @@
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
         <title>Pizza Inn</title>
         <link rel="icon" type="image/png" href="images/a1.png" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/home.css">
-        <link rel="stylesheet" type="text/css" href="css/akanname.css">
+        <link rel="stylesheet" type="text/css" href="./css/order.css">
         <link rel="stylesheet" type="text/css" href="css/contact.css">
     </head>
     <body>
@@ -36,89 +37,67 @@
                         <h1>Order Now</h1>
                         <h4>Pizza Size:</h4>
                         <select required  id="size">
-                            <option value="3">Small - 3000 RWF</option>
-                            <option value="4">Medium - 5000 RWF</option>
-                            <option value="5">Large - 7,000 RWF</option>
+                            <option value="3000 RWF - Small" name="size" >Small - 3000 RWF</option>
+                            <option value="5000 RWF - Medium" name="size">Medium - 5000 RWF</option>
+                            <option value="7000 RWF - Large" name="size">Large - 7000 RWF</option>
                         </select>
                         <h4>Crust Type:</h4>
-                        <select required class="form-control" id="crust">
-                            <option value="1" name="small">Crispy - 500 RWF</option>
-                            <option value="2" name="medium">Stuffed - 1000 RWF</option>
-                            <option value="3" name="large">Gluten-free - 1500 RWF</option>
+                        <select required id="crust">
+                            <option value="500 RWF - Crispy" name="small">Crispy - 500 RWF</option>
+                            <option value="1000 RWF - Stuffed" name="medium">Stuffed - 1000 RWF</option>
+                            <option value="1500 RWF - Gluten-free" name="large">Gluten-free - 1500 RWF</option>
                         </select>
                         <h4>Toppings:</h4>
-                        <input value="Cheese" name="topping" type="checkbox">Cheese - 500 RWF<br>
-                        <input value="Pepperoni" name="topping" type="checkbox">Pepperoni - 500 RWF<br>
-                        <input value="Chicken" name="topping" type="checkbox">Chicken - 500 RWF<br>
-                        <input value="Sausage" name="topping" type="checkbox">Sausage - 500 RWF
+                        <select required id="toppings">
+                            <option value="500 RWF - Cheese" name="small">Cheese - 500 RWF</option>
+                            <option value="500 RWF - Pepperoni" name="medium">Pepperoni - 500 RWF</option>
+                            <option value="500 RWF - Chicken" name="large">Chicken - 500 RWF</option>
+                            <option value="500 RWF - Sausage" name="large">Sausage - 500 RWF</option>
+                        </select>
                         <h4>How many Pizza(s):</h4>
-                        <input placeholder="Pizza(s)" type="number">
+                        <input id="nbr" placeholder="0" type="number" style="width: 30px">
                         <h4>Delivered:</h4>
-                        <input name="deliv" type="radio">Yes 
-                        <input name="deliv" type="radio">No
-                        <h4>Your location:</h4>
-                        <input placeholder="Place to be delivered to" type="text">
+                        <input type="radio" name="Yes" value="Yes">Yes 
+                        <input type="radio" name="Yes" value="No">No<br><br>
+                        <!-- <h4>Your location:</h4>
+                        <input id="lct" placeholder="Place to be delivered to" type="text"> -->
                         <input type="submit" value="Checkout" id="submit">
                 </div>
             </div>
                 <div class="output-data" id="output output-data">
                     <div class="text">
                         <h1>Your Information</h1>
-                        <p><b>Pizza Size: </b><span id="first"></span></p>
-                        <p><b>Crust Type: </b><span id="last"></span></p>
-                        <p><b>Toppings: </b><span id="output-century">...</span></p>
-                        <p><b>How many Pizza(s): </b><span id="fm">...</span></p>
-                        <p><b>Delivered: </b><span id="idnbr">...</span></p>
-                        <p><b>Your location: </b><span id="given-name">....</span></p>
+                        <p><b>Pizza Size: </b><span id="a1"></span></p>
+                        <p><b>Crust Type: </b><span id="a2"></span></p>
+                        <p><b>Toppings: </b><span id="a3">...</span> <span id="a4"></span> <span id="a5"></span> <span id="a6"></span></p>
+                        <p><b>How many Pizza(s): </b><span id="a7">...</span></p>
+                        <!-- <p><b>Delivered: </b><span id="a5">...</span></p> -->
+                        <!-- <p><b>Your location: </b><span id="a6">....</span></p> -->
                     </div>
                 </div>
                 <div class="empty-output" id="empty-output">
                     <div class="text">
                         <h1>Total Charge</h1>
-                        <p><span id="given-name-again">....</span></p>
+                        <p id="dl">...</p>
                     </div>
                 </div>
             </div>
-        <div class="contact" id="contact">
-            <div class="contheader">
-                <h1>Get In Touch</h1>
+
+        <footer>
+            <div class="footer-left">
+                <a href="#">Home</a>
+                <a href="#about">Order now</a>
+                <a href="#">Copyright 2019</a>
             </div>
-            <div class="contnbr">
-                    <div class="flip-card">
-                      <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p><strong>Phone Number</strong></p>
-                          <img style="width: 100%; height:230px" src="images/a6.png">
-                        </div>
-                        <div class="flip-card-back">
-                          <h1>Phone Number</h1> <hr>
-                          <h3>Carine I. SEMWAGA</h3> 
-                          <p><b>+250 788 206 956</b></p>
-                        </div>
-                      </div>
-                    </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="#"><img src="./images/l1.png"></a>
+                    <a href="#"><img src="./images/l2.png"></a>
+                    <a href="#"><img src="./images/l3.png"></a>
+                    <a href="#"><img src="./images/l4.png"></a>
+                </div>
             </div>
-            <div class="contemail">
-                    <div class="flip-card">
-                      <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p><b>E-mail Address</b></p>
-                          <img style="width: 100%; height:230px" src="images/a4.jpeg">
-                        </div>
-                        <div class="flip-card-back">
-                          <h1>E-mail Address</h1> <hr/>
-                          <h3>Carine I. SEMWAGA</h3> 
-                          <p><b>semwagacarine@gmail.com</b></p>
-                        </div>
-                      </div>
-                    </div>
-            </div>
-            <div class="contlink">
-                <a href="https://www.linkedin.com/in/carine-ishimwe-semwaga-29aa11149/" target="_blank" style="margin-right: 250px">Linkedin</a>
-                <a href="https://github.com/Krasivaya" target="_blank" style="margin-right: 250px">Github</a>
-                <a href="https://gitlab.com/Krasivaya?nav_source=navbar" target="_blank" style="margin-right: 50px">Gitlab</a>
-            </div>
-        </div>
+        </footer>
 
         <script src="js/script.js"></script>
         <script>
